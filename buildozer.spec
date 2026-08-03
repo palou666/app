@@ -16,7 +16,7 @@ android.accept_sdk_license = True
 android.allow_backup = True
 android.archs = arm64-v8a, armeabi-v7a
 android.copy_libs = True
-
+android.allow_libffi = True
 [buildozer]
 log_level = 2
 warn_on_root = 1
