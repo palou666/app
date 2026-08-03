@@ -7,7 +7,7 @@ source.include_exts = py,png,jpg,kv,atlas,onnx
 source.exclude_exts = spec,pyc,pyo
 source.exclude_dirs = tests, bin, .git, .buildozer, __pycache__, build, dist
 version = 0.1
-requirements = python3,kivy==2.2.0,plyer,opencv-python==4.5.5.64,numpy,onnxruntime==1.15.0
+requirements = python3==3.10.0,kivy==2.2.0,plyer,opencv-python==4.5.5.64,numpy
 android.api = 33
 android.minapi = 24
 android.ndk = 28c
