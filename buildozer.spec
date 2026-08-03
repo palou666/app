@@ -17,6 +17,7 @@ android.allow_backup = True
 android.archs = arm64-v8a, armeabi-v7a
 android.copy_libs = True
 android.allow_libffi = True
+android.libffi_version = 3.4.4
 [buildozer]
 log_level = 2
 warn_on_root = 1
