@@ -18,15 +18,24 @@ jobs:
         sudo sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
         sudo apt update
 
-    - name: Install system dependencies
+    - name: Install full system dependencies
       run: |
-        sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev autoconf automake
+        sudo apt install -y \
+          git zip unzip openjdk-17-jdk python3-pip \
+          autoconf libtool pkg-config \
+          zlib1g-dev libncurses5-dev libncursesw5-dev \
+          cmake libffi-dev libssl-dev \
+          autoconf automake gettext libtool-bin
 
     - name: Install buildozer
       run: |
         pip3 install --user Cython==0.29.33 virtualenv
         pip3 install --user buildozer
         echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Clean libffi build cache (fix autogen.sh)
+      run: |
+        rm -rf .buildozer/android/platform/build-*/build/other_builds/libffi/
 
     - name: Build with buildozer
       run: |
