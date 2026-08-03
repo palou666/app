@@ -17,7 +17,8 @@ android.allow_backup = True
 android.archs = arm64-v8a, armeabi-v7a
 android.copy_libs = True
 android.allow_libffi = True
-android.libffi_version = 3.4.4
+android.libffi_version = 3.4.6
+android.libffi_url = https://github.com/libffi/libffi/releases/download/v3.4.6/libffi-3.4.6.tar.gz
 [buildozer]
 log_level = 2
 warn_on_root = 1
